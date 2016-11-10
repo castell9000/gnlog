@@ -57,6 +57,8 @@
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
                             </div>
                         </div>
+                        <hr>
+                        <a href="/auth/naver">네이버 로그인</a>
                     </form>
                 </div>
             </div>
