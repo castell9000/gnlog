@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/auth/logout', 'Auth\AuthController@getLogout');
+Route::get('/auth/naver', 'NaverAuthController@redirectToProvider');
+Route::get('/auth/naver/callback','NaverAuthController@handleProviderCallback');
