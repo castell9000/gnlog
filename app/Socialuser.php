@@ -12,7 +12,7 @@ class Socialuser extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'provider','socialid','token','email','name',
+        'provider','socialid','token','email','name','jobs',
     ];
 
     /**

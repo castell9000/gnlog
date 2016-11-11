@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Socialuser;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use Laravel\Socialite\Facades\Socialite;
 
 class NaverAuthController extends Controller
 {
+
     public function redirectToProvider(){
         return Socialite::with('naver') -> redirect();
     }
@@ -28,10 +29,12 @@ class NaverAuthController extends Controller
                 'socialid' => $user->getId(),
                 'email' => $user->getEmail(),
                 'token' => $user->token,
-                'name' => $user->getName(),
+                'name' => $user->getNickname(),
             ]);
         }
-        \Auth::login($userToLogin);
+        Auth::login($userToLogin);
         return redirect('/');
     }
+
+
 }
