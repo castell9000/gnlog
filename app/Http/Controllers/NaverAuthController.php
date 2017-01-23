@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Log;
 use App\Socialuser;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -32,7 +33,8 @@ class NaverAuthController extends Controller
                 'name' => $user->getNickname(),
             ]);
         }
-        Auth::login($userToLogin);
+        auth()->login($userToLogin, true);
+	
         return redirect('/');
     }
 

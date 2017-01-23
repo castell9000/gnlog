@@ -70,6 +70,11 @@ return [
             'model' => App\User::class,
         ],
 
+          'naver' => [
+            'driver' => 'eloquent',
+            'model' => App\Socialuser::class,
+        ]
+
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

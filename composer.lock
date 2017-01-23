@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f3f4198691d27500a8e92d72a0eff6c1",
-    "content-hash": "1c648fcb42a81ca91e8264c91e9929e6",
+    "hash": "fbccfbbbc4dcf6d6cd861df45077491b",
+    "content-hash": "b86a43d323f251fefdb1d34009cd89a6",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1645,6 +1645,43 @@
                 "shell"
             ],
             "time": "2016-03-09 05:03:14"
+        },
+        {
+            "name": "socialiteproviders/google",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SocialiteProviders/Google-Plus.git",
+                "reference": "2b007bcfe210f59dd8cb126f365fc8e8556a6653"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SocialiteProviders/Google-Plus/zipball/2b007bcfe210f59dd8cb126f365fc8e8556a6653",
+                "reference": "2b007bcfe210f59dd8cb126f365fc8e8556a6653",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0",
+                "socialiteproviders/manager": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SocialiteProviders\\Google\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DraperStudio",
+                    "email": "hello@draperstud.io"
+                }
+            ],
+            "description": "Google OAuth2 Provider for Laravel Socialite",
+            "time": "2016-07-31 10:32:24"
         },
         {
             "name": "socialiteproviders/manager",
