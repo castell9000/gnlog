@@ -11,6 +11,9 @@ class Socialuser extends Authenticatable
      *
      * @var array
      */
+
+
+    protected $table = 'socialusers';
     protected $fillable = [
         'provider','socialid','token','email','name','jobs',
     ];
