@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
 use Auth;
 use Log;
@@ -16,7 +16,7 @@ class NaverAuthController extends Controller
         return Socialite::with('naver') -> redirect();
     }
 
-    public function handleProviderCallback(Request $request){
+    public function handleProviderCallback(){
         $user = Socialite::with('naver')->stateless()->user();
         $userToLogin = Socialuser::where([
             'provider' => 'naver',
