@@ -16,8 +16,8 @@ class NaverAuthController extends Controller
         return Socialite::with('naver') -> redirect();
     }
 
-    public function handleProviderCallback(){
-        $user = Socialite::with('naver')->user();
+    public function handleProviderCallback(Request $request){
+        $user = Socialite::with('naver')->stateless()->user();
         $userToLogin = Socialuser::where([
             'provider' => 'naver',
             'socialid' => $user->getId(),
